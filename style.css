@@ -1,0 +1,91 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f3e5f5; /* Soft lavender background */
+    color: #333;
+}
+
+#notes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+    width: 85%;
+    justify-content: center;
+}
+
+.note {
+    width: 160px;
+    height: 180px;
+    background: linear-gradient(135deg, #ffccbc, #ffe0b2); /* Peach gradient */
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid #e1b6a7;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: box-shadow 0.2s ease;
+}
+
+.note:hover {
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.note textarea {
+    width: 100%;
+    height: calc(100% - 30px);
+    background-color: transparent;
+    color: #333;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 1em;
+    font-family: inherit;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 6px;
+    font-size: 0.8em;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+    background-color: #ff4c4c;
+}
+
+#add-note-btn {
+    padding: 10px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #ab47bc; /* Lavender button */
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#add-note-btn:hover {
+    background-color: #8e24aa;
+    transform: translateY(-2px);
+}
